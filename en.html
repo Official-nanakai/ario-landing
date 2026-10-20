@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARIO — Association for the Development of an Inclusive Society</title>
+<meta name="description" content="An inclusion ecosystem for people with disabilities and their families. We train teachers, coaches and job coaches, from early intervention to employment.">
+<link rel="canonical" href="https://official-nanakai.github.io/ario-landing/en.html">
+<link rel="alternate" hreflang="ru" href="https://official-nanakai.github.io/ario-landing/">
+<link rel="alternate" hreflang="en" href="https://official-nanakai.github.io/ario-landing/en.html">
+<link rel="alternate" hreflang="x-default" href="https://official-nanakai.github.io/ario-landing/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="ARIO — Association for the Development of an Inclusive Society">
+<meta property="og:description" content="An inclusion ecosystem for people with disabilities and their families. We train teachers, coaches and job coaches, from early intervention to employment.">
+<meta property="og:url" content="https://official-nanakai.github.io/ario-landing/en.html">
+<meta property="og:image" content="https://official-nanakai.github.io/ario-landing/group.webp">
+<meta name="theme-color" content="#13284a">
+<link rel="icon" type="image/svg+xml" href="logo-globe.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: светлые «бумажные» секции чередуются с тёмно-синими лентами; сквозной мотив — цветные точки логотипа, которые собираются в глобус, линию пути и круги роста. */
+:root{
+  --bg:#faf7f2; --surface:#ffffff; --surface-2:#f1ece3; --ink:#13284a; --ink-2:#34445f; --ink-3:#556079;
+  --line:#13284a24; --line-2:#13284a40; --accent:#b02c78; --accent-fill:#b8327f; --on-accent:#ffffff; --accent-hover:#9c256a;
+  --band:#13284a; --band-2:#1b3459; --band-ink:#f5f2ec; --band-ink-2:#c3cbda; --band-accent:#f490c6; --band-line:#ffffff26;
+  --focus:#13284a; --glass:#faf7f2e0; --shadow:0 10px 30px -12px #13284a40;
+  --d1:#5350b1; --d2:#4f5daa; --d3:#8bcbe7; --d4:#c8388b; --d5:#d78b73;
+  --font-display:"Onest","Golos Text",system-ui,sans-serif; --font-text:"Golos Text","Onest",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1); --ease-std:cubic-bezier(.2,0,0,1); --dur:360ms; --dur-fast:180ms;
+  --r-card:22px; --r-panel:32px; --r-pill:999px; --header-h:68px; --container:1240px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c1a30; --surface:#12233f; --surface-2:#172b4b; --ink:#eef1f6; --ink-2:#c6cedc; --ink-3:#9ba6bb;
+  --line:#eef1f61f; --line-2:#eef1f63d; --accent:#f490c6; --accent-fill:#d9479a; --on-accent:#ffffff; --accent-hover:#e45ea9;
+  --band:#081322; --band-2:#0f203a; --band-ink:#f5f2ec; --band-ink-2:#c3cbda; --band-accent:#f490c6; --band-line:#ffffff1f;
+  --focus:#eef1f6; --glass:#0c1a30e0; --shadow:0 10px 30px -12px #00000080; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1a30; --surface:#12233f; --surface-2:#172b4b; --ink:#eef1f6; --ink-2:#c6cedc; --ink-3:#9ba6bb;
+  --line:#eef1f61f; --line-2:#eef1f63d; --accent:#f490c6; --accent-fill:#d9479a; --on-accent:#ffffff; --accent-hover:#e45ea9;
+  --band:#081322; --band-2:#0f203a; --band-ink:#f5f2ec; --band-ink-2:#c3cbda; --band-accent:#f490c6; --band-line:#ffffff1f;
+  --focus:#eef1f6; --glass:#0c1a30e0; --shadow:0 10px 30px -12px #00000080; color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(var(--header-h) + 16px)}
+body{background:var(--bg);color:var(--ink-2);font:400 17px/1.55 var(--font-text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--glass)}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);margin:0;font-weight:600;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+a{color:var(--accent)}
+:where(a,button,summary):focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--container);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:720px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 10px)}
+.sec{padding-block:clamp(64px,8vw,120px)}
+.band{background:var(--band);color:var(--band-ink-2)}
+.band h2,.band h3,.band h4{color:var(--band-ink)}
+.band a{color:var(--band-accent)}
+.band :where(a,button):focus-visible{outline-color:var(--band-ink)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 13px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.band .eyebrow{color:var(--band-accent)}
+.dots-mark{display:inline-flex;gap:3px}.dots-mark i{width:6px;height:6px;border-radius:50%;display:block}
+.dots-mark i:nth-child(1){background:var(--d1)}.dots-mark i:nth-child(2){background:var(--d3)}.dots-mark i:nth-child(3){background:var(--d4)}.dots-mark i:nth-child(4){background:var(--d5)}
+.h2{font-size:clamp(30px,4.2vw,54px);line-height:1.06;letter-spacing:-.03em}
+.lead{font-size:clamp(17px,1.5vw,21px);line-height:1.5;color:var(--ink-2);max-width:56ch}
+.band .lead{color:var(--band-ink-2)}
+.head{display:grid;gap:18px;margin-bottom:clamp(32px,4vw,56px);max-width:62ch}
+.muted{color:var(--ink-3)}.band .muted{color:var(--band-ink-2)}
+.small{font-size:14px;line-height:1.45}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r-pill);border:1px solid transparent;font:500 16px/1.1 var(--font-text);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color var(--dur-fast) var(--ease-std),border-color var(--dur-fast) var(--ease-std),color var(--dur-fast) var(--ease-std),box-shadow var(--dur) var(--ease),scale 120ms var(--ease-std)}
+.btn:active{scale:.98}
+.btn svg{width:1.05em;height:1.05em;transition:translate var(--dur-fast) var(--ease-std)}
+.btn:hover svg{translate:3px 0}
+.btn--primary{background:var(--accent-fill);color:var(--on-accent)}
+.btn--primary:hover{background:var(--accent-hover);box-shadow:0 10px 24px -8px #c8388b80}
+.btn--ghost{color:var(--ink);border-color:var(--line-2);background:transparent}
+.btn--ghost:hover{background:var(--surface-2)}
+.band .btn--ghost{color:var(--band-ink);border-color:var(--band-line)}
+.band .btn--ghost:hover{background:var(--band-2)}
+.btn--sm{min-height:44px;padding:0 18px;font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--glass);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid transparent;transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.hdr.is-scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -16px #13284a40}
+.hdr .wrap{height:var(--header-h);display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+.brand__mark{width:50px;height:auto;aspect-ratio:518/527;flex:0 0 auto}
+.brand__name{font:700 20px/1 var(--font-display);letter-spacing:.02em}
+.brand__sub{display:block;font:400 11px/1.25 var(--font-text);color:var(--ink-3);max-width:20ch}
+.nav{display:none;gap:2px;margin-left:auto}
+.nav a{padding:8px 12px;border-radius:var(--r-pill);font:500 14px/1 var(--font-text);color:var(--ink-2);text-decoration:none;transition:background-color var(--dur-fast) var(--ease-std)}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.hdr__tools{display:flex;align-items:center;gap:8px;margin-left:auto}
+.nav + .hdr__tools{margin-left:12px}
+.lang{display:inline-flex;padding:3px;border:1px solid var(--line-2);border-radius:var(--r-pill)}
+.lang a{display:inline-flex;align-items:center;min-height:32px;padding:0 11px;border-radius:var(--r-pill);font:500 13px/1 var(--font-text);color:var(--ink-3);text-decoration:none}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current="true"]{background:var(--ink);color:var(--bg)}
+.iconbtn{width:40px;height:40px;display:inline-grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);background:none;color:var(--ink);cursor:pointer}
+.iconbtn svg{width:18px;height:18px}
+.hdr .btn{display:none}
+@media(min-width:1100px){.nav{display:flex}.hdr__tools{margin-left:0}}
+@media(min-width:640px){.hdr .btn{display:inline-flex}}
+@media(max-width:420px){.brand__sub{display:none}}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(40px,6vw,88px) clamp(56px,7vw,104px);overflow:hidden}
+.hero .wrap{display:grid;gap:clamp(24px,4vw,56px);align-items:center}
+@media(min-width:960px){.hero .wrap{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}}
+.hero h1{font-size:clamp(38px,5.6vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:600}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__lead{margin-top:22px;font-size:clamp(17px,1.5vw,21px);line-height:1.5;max-width:50ch}
+.hero__actions{margin-top:32px}
+.hero__meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 18px;font-size:14px;color:var(--ink-3)}
+.chip{display:inline-flex;align-items:baseline;gap:9px;font-size:14px;line-height:1.4;color:var(--ink-2)}
+.chip__dot{width:8px;height:8px;border-radius:50%;background:var(--d4);flex:0 0 auto;position:relative;translate:0 -.05em}
+.chip--live .chip__dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:ping 2.4s var(--ease) infinite}
+.globe{position:relative;width:100%;max-width:560px;aspect-ratio:1;justify-self:center}
+.globe canvas{width:100%;height:100%;display:block}
+.globe__caption{position:absolute;left:50%;bottom:4%;translate:-50% 0;font-size:13px;color:var(--ink-3);white-space:nowrap}
+@media(max-width:959px){.globe{max-width:340px;order:-1}}
+[data-hero] > *{animation:rise 420ms var(--ease) both;animation-delay:calc(var(--i,0)*80ms)}
+
+/* scale */
+.scale{display:grid;gap:clamp(28px,4vw,48px)}
+@media(min-width:860px){.scale{grid-template-columns:1fr 1fr}}
+.bignum{font:600 clamp(56px,9vw,128px)/.95 var(--font-display);letter-spacing:-.045em;color:var(--band-ink);font-variant-numeric:tabular-nums}
+.bignum small{font-size:.5em;letter-spacing:-.02em}
+.scale__item{padding-top:22px;border-top:2px solid var(--band-accent);display:grid;gap:14px}
+.scale__item:nth-child(2){border-top-color:var(--d3)}
+.quote-line{margin-top:clamp(36px,5vw,64px);font:500 clamp(20px,2.2vw,30px)/1.3 var(--font-display);color:var(--band-ink);max-width:40ch;letter-spacing:-.015em}
+.quote-line span{color:var(--band-accent)}
+.src{margin-top:20px;font-size:13px;color:var(--band-ink-2)}
+
+/* barriers */
+.grid-2{display:grid;gap:16px}
+@media(min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
+.barrier{padding:clamp(22px,2.4vw,32px);border-radius:var(--r-card);background:var(--surface);border:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:start}
+.barrier__dot{grid-row:span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
+.barrier__dot i{width:14px;height:14px;border-radius:50%;background:currentColor}
+.barrier h3{font-size:clamp(19px,1.6vw,22px);line-height:1.25}
+.conclusion{margin-top:24px;padding:22px 26px;border-radius:var(--r-card);background:var(--surface-2);font-size:clamp(17px,1.4vw,19px);color:var(--ink)}
+.conclusion b{color:var(--accent);font-weight:600}
+
+/* model flow */
+.flow{position:relative;display:grid;gap:14px}
+@media(min-width:900px){.flow{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}}
+.flow__line{position:absolute;inset:0;pointer-events:none;display:none}
+@media(min-width:900px){.flow__line{display:block}}
+.flow__line path{fill:none;stroke:var(--accent-fill);stroke-width:2.5;stroke-linecap:round}
+.step{position:relative;z-index:1;padding:22px;border-radius:var(--r-card);background:var(--surface);border:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.step__n{font:600 13px/1 var(--font-display);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.step h3{font-size:19px;line-height:1.2}
+.step p{font-size:15px;line-height:1.45}
+.step--end{background:var(--accent-fill);border-color:transparent}
+.step--end h3,.step--end p,.step--end .step__n{color:var(--on-accent)}
+.step--start{background:var(--band);border-color:transparent}
+.step--start h3{color:var(--band-ink)}.step--start p,.step--start .step__n{color:var(--band-ink-2)}
+.notes{margin-top:18px;display:grid;gap:12px}
+@media(min-width:760px){.notes{grid-template-columns:1fr 1fr}}
+.note{padding:16px 20px;border-radius:16px;background:var(--surface-2);font-size:15px;color:var(--ink-2)}
+.note b{color:var(--ink);font-weight:600}
+
+/* life cycle (horizontal pin) */
+.cycle{position:relative}
+.cycle__pin{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--header-h));overflow:hidden;padding-block:clamp(40px,5vw,64px)}
+.cycle__track{display:flex;gap:18px;will-change:transform;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:720px){.cycle__track{padding-left:max(40px,calc((100vw - var(--container))/2 + 40px));padding-right:40px}}
+.stage{flex:0 0 min(84vw,380px);border-radius:var(--r-card);background:var(--band-2);border:1px solid var(--band-line);padding:24px;display:grid;gap:14px;align-content:start}
+.stage__top{display:flex;align-items:center;gap:12px}
+.stage__badge{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 16px/1 var(--font-display);color:#13284a}
+.stage h3{font-size:22px;line-height:1.15}
+.stage dl{margin:0;display:grid;gap:10px}
+.stage dt{font:600 12px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--band-ink-2)}
+.stage dd{margin:2px 0 0;font-size:15px;line-height:1.45;color:var(--band-ink)}
+.stage__res{margin-top:4px;padding-top:14px;border-top:1px solid var(--band-line);font-size:15px;color:var(--band-ink)}
+.stage__res b{color:var(--band-accent);font-weight:600}
+.cycle__progress{margin-top:28px;height:3px;border-radius:3px;background:var(--band-line);overflow:hidden}
+.cycle__progress i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--d1),var(--d3),var(--d4),var(--d5))}
+.cycle__gov{margin-top:22px;font-size:15px;color:var(--band-ink-2)}
+.cycle__gov b{color:var(--band-ink)}
+.cycle.is-static .cycle__pin{position:static}
+.cycle.is-static .cycle__track{flex-direction:column;transform:none!important}
+.cycle.is-static .stage{flex:auto}
+@media(max-width:719px){.cycle .cycle__pin{position:static}.cycle .cycle__track{flex-direction:column;transform:none!important}.cycle .stage{flex:auto}}
+
+/* stories */
+.story{display:grid;gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(32px,4vw,56px);border-top:1px solid var(--line)}
+.story:first-of-type{border-top:0;padding-top:0}
+@media(min-width:900px){.story{grid-template-columns:1fr 1fr}.story--flip .story__media{order:2}}
+.story__media{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.story__media--one{grid-template-columns:1fr}
+.ph{position:relative;border-radius:var(--r-card);overflow:hidden;background:var(--surface-2);clip-path:inset(0 round var(--r-card));transition:clip-path 700ms var(--ease)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:scale 900ms var(--ease)}
+.js .ph[data-in="false"]{clip-path:inset(0 100% 0 0 round var(--r-card))}
+.js .ph[data-in="false"] img{scale:1.06}
+.story__body{display:grid;gap:16px;min-width:0}
+.story__kicker{font:600 13px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.story h3{font-size:clamp(24px,2.6vw,34px);line-height:1.12}
+.ol{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:s}
+.ol li{counter-increment:s;display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:16px;color:var(--ink-2)}
+.ol li::before{content:counter(s,decimal-leading-zero);font:600 13px/1.6 var(--font-display);color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:7px 13px;border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--line);font-size:14px;color:var(--ink-2)}
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px;margin-top:6px}
+.mini{padding-top:12px;border-top:2px solid var(--d1)}
+.mini:nth-child(2){border-color:var(--d3)}.mini:nth-child(3){border-color:var(--d4)}
+.mini b{display:block;font:600 clamp(30px,3vw,40px)/1 var(--font-display);color:var(--ink);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.mini span{display:block;margin-top:6px;font-size:14px;line-height:1.4;color:var(--ink-3)}
+.pullout{font:500 18px/1.4 var(--font-display);color:var(--ink)}
+.pullout em{font-style:normal;color:var(--accent)}
+
+/* impact */
+.impact{display:grid;gap:0;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:900px){.impact{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.kpi{padding:22px 18px 26px 0;border-top:1px solid var(--band-line);display:grid;gap:10px;align-content:start}
+.kpi b{font:600 clamp(40px,5.4vw,76px)/.95 var(--font-display);letter-spacing:-.045em;color:var(--band-ink);font-variant-numeric:tabular-nums}
+.kpi span{font-size:15px;line-height:1.4;max-width:26ch}
+.badges{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px}
+.badge{padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--band-line);font-size:14px;color:var(--band-ink)}
+.data-note{margin-top:18px;font-size:13px;color:var(--band-ink-2)}
+
+/* gov + un */
+.gov4{display:grid;gap:12px}
+@media(min-width:760px){.gov4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.gov4 .step{background:var(--surface)}
+.gov4 .step:nth-child(4){background:var(--band);border-color:transparent}
+.gov4 .step:nth-child(4) h3{color:var(--band-ink)}.gov4 .step:nth-child(4) p,.gov4 .step:nth-child(4) .step__n{color:var(--band-ink-2)}
+.who{margin-top:16px;display:grid;gap:12px}
+@media(min-width:760px){.who{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.who div{padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--surface)}
+.who b{display:block;color:var(--ink);font:600 17px/1.3 var(--font-display);margin-bottom:4px}
+.who p{font-size:15px}
+.un{margin-top:clamp(40px,5vw,72px);display:grid;gap:clamp(24px,4vw,48px);align-items:center}
+@media(min-width:900px){.un{grid-template-columns:1.05fr .95fr}}
+.un__card{padding:20px 22px;border-radius:var(--r-card);background:var(--surface-2);display:grid;gap:6px}
+.un__card b{color:var(--ink);font:600 18px/1.3 var(--font-display)}
+
+/* marquee */
+.mq{margin-top:clamp(40px,5vw,64px);display:grid;gap:14px}
+.mq__bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mq__view{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq__track{display:flex;gap:12px;width:max-content;animation:marquee 48s linear infinite}
+.mq.is-paused .mq__track,.mq__view:hover .mq__track,.mq__view:focus-within .mq__track{animation-play-state:paused}
+.org{flex:0 0 auto;padding:14px 20px;border-radius:16px;border:1px solid var(--line);background:var(--surface);font:600 15px/1.2 var(--font-display);color:var(--ink);display:flex;align-items:center;gap:10px;white-space:nowrap}
+.org i{width:10px;height:10px;border-radius:50%}
+
+/* esg */
+.esg{display:grid;gap:14px}
+@media(min-width:900px){.esg{grid-template-columns:.8fr 1.4fr .8fr}}
+.pillar{padding:clamp(22px,2.4vw,32px);border-radius:var(--r-card);background:var(--surface);border:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.pillar__l{font:700 44px/1 var(--font-display);color:var(--ink)}
+.pillar h3{font-size:18px;line-height:1.25}
+.pillar ul{margin:0;padding-left:1.1em;display:grid;gap:6px;font-size:15px}
+.pillar--s{background:var(--band);border-color:transparent;color:var(--band-ink-2)}
+.pillar--s .pillar__l{color:var(--band-accent)}.pillar--s h3{color:var(--band-ink)}
+.sdg{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.sdg span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--r-pill);background:var(--band-2);color:var(--band-ink);font-size:13px;font-weight:500}
+.get{margin-top:clamp(28px,3vw,40px);display:grid;gap:clamp(20px,3vw,40px)}
+@media(min-width:900px){.get{grid-template-columns:1fr 1fr}}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px}
+.checks li::before{content:"";width:12px;height:12px;margin-top:6px;border-radius:50%;background:var(--accent-fill);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent-fill) 18%,transparent)}
+.caveat{margin-top:20px;padding:14px 18px;border-radius:14px;border:1px dashed var(--line-2);font-size:14px;color:var(--ink-3)}
+.formats{display:flex;flex-wrap:wrap;gap:8px}
+
+/* theory */
+.toc{display:grid;gap:12px}
+@media(min-width:960px){.toc{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.toc__col{border-radius:var(--r-card);background:var(--band-2);border:1px solid var(--band-line);overflow:hidden}
+.toc__col h3{padding:14px 18px;font-size:15px;letter-spacing:0;color:#13284a}
+.toc__col ul{list-style:none;margin:0;padding:16px 18px 20px;display:grid;gap:10px;font-size:15px;color:var(--band-ink)}
+.toc__col:last-child{background:var(--band-accent)}
+.toc__col:last-child ul{color:#13284a;font-weight:500}
+.measure{margin-top:18px;font-size:15px;color:var(--band-ink-2)}
+.measure b{color:var(--band-ink)}
+
+/* scaling rings */
+.grow{display:grid;gap:clamp(24px,4vw,56px);align-items:center}
+@media(min-width:900px){.grow{grid-template-columns:.9fr 1.1fr}}
+.rings{position:relative;width:100%;max-width:440px;aspect-ratio:1;justify-self:center}
+.rings svg{width:100%;height:100%;overflow:visible}
+.rings .r{fill:none;stroke-width:1.5;stroke-dasharray:3 6}
+.rings .lbl{font:600 13px var(--font-text);fill:var(--ink)}
+.rings .lbl-2{font:400 12px var(--font-text);fill:var(--ink-3)}
+.phases{display:grid;gap:12px}
+.phase{padding:20px 22px;border-radius:var(--r-card);border:1px solid var(--line);background:var(--surface);display:grid;gap:6px}
+.phase.is-now{border-color:var(--accent-fill);box-shadow:inset 0 0 0 1px var(--accent-fill)}
+.phase__k{font:600 12px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.phase.is-now .phase__k{color:var(--accent)}
+.phase h3{font-size:20px}
+.why{margin-top:16px;font-size:16px;color:var(--ink)}
+.why b{color:var(--accent);font-weight:600}
+
+/* founders */
+.founders{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:960px){.founders{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fd{display:grid;gap:12px;align-content:start}
+.fd .ph{aspect-ratio:4/5}
+.fd__ph-empty{display:grid;place-items:center;height:100%;font:600 40px/1 var(--font-display);color:var(--ink-3);background:radial-gradient(circle at 30% 30%,var(--surface),var(--surface-2))}
+.fd h3{font-size:19px;line-height:1.2}
+.fd__org{font:600 12px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.fd p{font-size:14px;line-height:1.45;color:var(--ink-3)}
+.team{margin-top:clamp(28px,4vw,48px);display:grid;gap:clamp(20px,3vw,40px);align-items:center}
+@media(min-width:900px){.team{grid-template-columns:1fr 1fr}}
+.team .ph{aspect-ratio:1}
+
+/* faq */
+.faq{border-top:1px solid var(--line);max-width:860px}
+.faq__it{border-bottom:1px solid var(--line)}
+.faq__q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font:500 clamp(17px,1.5vw,20px)/1.3 var(--font-display);color:var(--ink)}
+.faq__ic{width:36px;height:36px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);transition:rotate var(--dur) var(--ease),background-color var(--dur-fast)}
+.faq__q:hover .faq__ic{background:var(--surface-2)}
+.faq__it[data-open="true"] .faq__ic{rotate:45deg}
+.faq__p{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--dur) var(--ease)}
+.faq__it[data-open="true"] .faq__p{grid-template-rows:1fr}
+.faq__p > div{overflow:hidden}
+.faq__p p{padding-bottom:22px;max-width:66ch}
+
+/* final */
+.final h2{font-size:clamp(34px,5.4vw,72px);line-height:1.04;letter-spacing:-.035em;max-width:16ch}
+.final h2 .ln{display:block}
+.final h2 .ln--accent{color:var(--band-accent)}
+.contacts{margin-top:clamp(40px,5vw,64px);display:grid;gap:12px}
+@media(min-width:760px){.contacts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.contacts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ct{padding:18px 20px;border-radius:16px;border:1px solid var(--band-line);display:grid;gap:6px;align-content:start;min-width:0}
+.ct__k{font:600 12px/1.3 var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--band-ink-2)}
+.ct__v{font:500 17px/1.35 var(--font-display);color:var(--band-ink);user-select:all;overflow-wrap:anywhere}
+.ct__row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.copy{border:1px solid var(--band-line);background:none;color:var(--band-ink);min-height:36px;padding:0 12px;border-radius:var(--r-pill);font:500 13px/1 var(--font-text);cursor:pointer}
+.copy:hover{background:var(--band-2)}
+.foot__brand{display:inline-flex;align-items:center;gap:10px}.foot__brand img{width:28px;height:auto}
+.foot{padding-block:28px;align-items:center;border-top:1px solid var(--band-line);font-size:13px;color:var(--band-ink-2);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));translate:-50% 20px;opacity:0;z-index:80;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);font-size:14px;transition:opacity var(--dur) var(--ease),translate var(--dur) var(--ease);pointer-events:none}
+.toast.is-on{opacity:1;translate:-50% 0}
+
+/* reveal: только для блоков ниже первого экрана, сдвиг ≤ 24px, 360ms (по ТЗ) */
+.js [data-r]:not(.is-in){opacity:0;translate:0 20px}
+[data-r]{transition:opacity var(--dur) var(--ease),translate var(--dur) var(--ease);transition-delay:calc(var(--i,0)*70ms)}
+
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes ping{0%{opacity:.6;scale:1}70%,100%{opacity:0;scale:2.6}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* motion off: системная настройка или кнопка в шапке — остаётся только прозрачность */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-property:opacity!important}
+  .js [data-r]:not(.is-in){translate:none}
+  .js .ph[data-in="false"]{clip-path:inset(0 round var(--r-card))}.js .ph[data-in="false"] img{scale:1}
+  .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
+}
+html.motion-off *,html.motion-off *::before,html.motion-off *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-property:opacity!important}
+html.motion-off.js [data-r]:not(.is-in){translate:none}
+html.motion-off.js .ph[data-in="false"]{clip-path:inset(0 round var(--r-card))}
+html.motion-off.js .ph[data-in="false"] img{scale:1}
+html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ARIO — home">
+      <img class="brand__mark" src="logo-globe.svg" alt="" width="40" height="41">
+      <span><span class="brand__name">ARIO</span><span class="brand__sub">Association for the Development of an Inclusive Society</span></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#model">Model</a><a href="#cycle">Journey</a><a href="#cases">Results</a><a href="#esg">For business</a><a href="#team">Founders</a><a href="#contacts">Contacts</a>
+    </nav>
+    <div class="hdr__tools">
+      <nav class="lang" aria-label="Language"><a href="./" hreflang="ru" lang="ru">Рус</a><a href="en.html" hreflang="en" lang="en" aria-current="true">Eng</a></nav>
+      <button class="iconbtn" type="button" id="motionBtn" aria-pressed="false" aria-label="Pause animation" title="Pause animation">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="#esg">Become a partner</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div data-hero>
+      <span class="eyebrow" style="--i:0"><span class="dots-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Association for the Development of an Inclusive Society · Astana</span>
+      <h1 id="h-hero" style="--i:1;margin-top:18px">An inclusion ecosystem for people with&nbsp;disabilities <em>and&nbsp;their&nbsp;families</em></h1>
+      <p class="hero__lead" style="--i:2">We train teachers, coaches and job coaches inside existing schools and centres, together with the state, from early intervention to employment.</p>
+      <div class="hero__actions actions" style="--i:3">
+        <a class="btn btn--primary" href="#esg">Become a partner <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn--ghost" href="#model">How we work</a>
+      </div>
+      <div class="hero__meta" style="--i:4">
+        <span class="chip chip--live"><span class="chip__dot"></span>5,000+ families in the ecosystem</span>
+        <span class="chip"><span class="chip__dot" style="background:var(--d3)"></span>6 regions of Kazakhstan</span>
+        <span class="chip"><span class="chip__dot" style="background:var(--d1)"></span>Candidate for UN ECOSOC status</span>
+      </div>
+    </div>
+    <div class="globe" aria-hidden="true">
+      <canvas id="globe"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE -->
+<section class="sec band" aria-labelledby="h-scale">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The scale of the challenge</span>
+      <h2 class="h2" id="h-scale">Behind every number is a person whose life today depends on luck</h2>
+    </div>
+    <div class="scale">
+      <div class="scale__item" data-r>
+        <div class="bignum"><small>~</small><span data-count="750000">750,000</span></div>
+        <p>people with disabilities in Kazakhstan in 2025</p>
+      </div>
+      <div class="scale__item" data-r style="--i:1">
+        <div class="bignum"><small>~</small><span data-count="240000">240,000</span></div>
+        <p>children with special educational needs at the start of the 2025–2026 school year</p>
+      </div>
+    </div>
+    <p class="quote-line" data-r>Will a school accept the child, will there be a tutor, can the mother keep her job? <span>We work so that none of this depends on luck.</span></p>
+    <p class="src">Sources: Bureau of National Statistics of Kazakhstan (stat.gov.kz); primeminister.kz</p>
+  </div>
+</section>
+
+<!-- ROOT CAUSE -->
+<section class="sec" aria-labelledby="h-cause">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Root cause</span>
+      <h2 class="h2" id="h-cause">The barrier is not a lack of buildings but the people and links around the child</h2>
+    </div>
+    <div class="grid-2">
+      <article class="barrier" data-r><span class="barrier__dot" style="color:var(--d1);background:color-mix(in srgb,var(--d1) 14%,transparent)"><i></i></span><h3>Specialists without tools</h3><p>Teachers and coaches are not trained in inclusive methods or individual education plans.</p></article>
+      <article class="barrier" data-r style="--i:1"><span class="barrier__dot" style="color:var(--d3);background:color-mix(in srgb,var(--d3) 22%,transparent)"><i></i></span><h3>Fragmented systems</h3><p>Education, sport, healthcare and employment work separately, so support breaks at every transition.</p></article>
+      <article class="barrier" data-r style="--i:2"><span class="barrier__dot" style="color:var(--d4);background:color-mix(in srgb,var(--d4) 14%,transparent)"><i></i></span><h3>Families drop out of the economy</h3><p>The mother of a child with a disability almost always leaves her job.</p></article>
+      <article class="barrier" data-r style="--i:3"><span class="barrier__dot" style="color:var(--d5);background:color-mix(in srgb,var(--d5) 20%,transparent)"><i></i></span><h3>The labour market does not see this talent</h3><p>Employers do not know how to hire and support an employee with a disability.</p></article>
+    </div>
+    <p class="conclusion" data-r>The most effective lever is <b>the knowledge of people</b> who already work with children and adults every day.</p>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section class="sec" id="model" aria-labelledby="h-model" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The ARIO model</span>
+      <h2 class="h2" id="h-model">We invest in the knowledge of those who include children</h2>
+      <p class="lead">Every contribution changes many lives, through trained specialists.</p>
+    </div>
+    <div class="flow" id="flow">
+      <svg class="flow__line" id="flowLine" aria-hidden="true"><path id="flowPath"/></svg>
+      <div class="step step--start" data-r><span class="step__n">01</span><h3>Partner funds</h3><p>Targeted programme funding</p></div>
+      <div class="step" data-r style="--i:1"><span class="step__n">02</span><h3>Research and training</h3><p>Programmes built by our own research centre</p></div>
+      <div class="step" data-r style="--i:2"><span class="step__n">03</span><h3>Teachers, coaches, job coaches</h3><p>Plus psychologists, rehabilitation specialists, HR</p></div>
+      <div class="step" data-r style="--i:3"><span class="step__n">04</span><h3>Existing institutions</h3><p>Schools, medical and social institutions, sports and inclusive centres, employers</p></div>
+      <div class="step step--end" data-r style="--i:4"><span class="step__n">05</span><h3>People with disabilities</h3><p>Children, adults and their families</p></div>
+    </div>
+    <div class="notes">
+      <p class="note" data-r><b>The state</b> is a partner at every stage, from early intervention to employment.</p>
+      <p class="note" data-r style="--i:1"><b>Business</b> opens vacancies; we provide support and train job coaches.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE CYCLE -->
+<section class="band cycle" id="cycle" aria-labelledby="h-cycle">
+  <div class="cycle__pin">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:28px">
+        <span class="eyebrow">Life cycle</span>
+        <h2 class="h2" id="h-cycle">We support a person from early intervention to employment</h2>
+      </div>
+    </div>
+    <div class="cycle__track" id="cycleTrack">
+      <article class="stage"><div class="stage__top"><span class="stage__badge" style="background:var(--d1);color:#fff">1</span><h3>Early intervention</h3></div>
+        <dl><div><dt>We train</dt><dd>Specialists, psychologists, parents</dd></div><div><dt>Base</dt><dd>Medical and social institutions, rehabilitation centres</dd></div></dl>
+        <p class="stage__res"><b>OZIM:</b> research and a parenting app</p></article>
+      <article class="stage"><div class="stage__top"><span class="stage__badge" style="background:var(--d3)">2</span><h3>Education</h3></div>
+        <dl><div><dt>We train</dt><dd>Teachers through a peer-to-peer model</dd></div><div><dt>Base</dt><dd>Schools, including School No. 96 in Astana</dd></div></dl>
+        <p class="stage__res"><b>30+ teachers;</b> EveryMind, UYA</p></article>
+      <article class="stage"><div class="stage__top"><span class="stage__badge" style="background:var(--d4);color:#fff">3</span><h3>Sport and socialisation</h3></div>
+        <dl><div><dt>We train</dt><dd>Coaches and families</dd></div><div><dt>Base</dt><dd>Karate centres and sports clubs</dd></div></dl>
+        <p class="stage__res"><b>Pilot of</b> inclusive karate</p></article>
+      <article class="stage"><div class="stage__top"><span class="stage__badge" style="background:var(--d5)">4</span><h3>Skills and family</h3></div>
+        <dl><div><dt>We train</dt><dd>Mothers and young people</dd></div><div><dt>Base</dt><dd>Inclusive centre, online</dd></div></dl>
+        <p class="stage__res"><b>300 mothers;</b> KISHKENTAI workshop</p></article>
+      <article class="stage"><div class="stage__top"><span class="stage__badge" style="background:var(--d2);color:#fff">5</span><h3>Employment</h3></div>
+        <dl><div><dt>We train</dt><dd>Job coaches and HR teams</dd></div><div><dt>Base</dt><dd>Partner companies</dd></div></dl>
+        <p class="stage__res"><b>15+</b> employed in 2025</p></article>
+    </div>
+    <div class="wrap">
+      <div class="cycle__progress" aria-hidden="true"><i id="cycleBar"></i></div>
+      <p class="cycle__gov">At every stage, with government bodies: <b>the Ministry of Labour and Social Protection, Astana City Akimat, local executive bodies</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="sec" id="cases" aria-labelledby="h-cases">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What already works</span>
+      <h2 class="h2" id="h-cases">We do not build new things. We strengthen what already works</h2>
+      <p class="lead">No spending on buildings or equipment: funds go to programmes and people, and the results stay in the system after the project ends.</p>
+    </div>
+
+    <div class="story">
+      <div class="story__media story__media--one"><div class="ph" data-in="false" style="aspect-ratio:1000/547"><img src="school.webp" alt="Teachers of School No. 96 in Astana with certificates after the ARIO programme" width="1000" height="547" loading="lazy"></div></div>
+      <div class="story__body">
+        <span class="story__kicker">Inclusive education · School No. 96, Astana</span>
+        <h3>A school learns to pass on its experience</h3>
+        <ol class="ol"><li>ARIO trains a core group of teachers</li><li>Teachers train their colleagues</li><li>The school develops inclusion on its own</li></ol>
+        <div class="minis">
+          <div class="mini"><b data-count="30" data-suffix="+">30+</b><span>teachers completed the full programme</span></div>
+          <div class="mini"><b data-count="100" data-suffix="%">100%</b><span>of teachers found it practically useful</span></div>
+          <div class="mini"><b data-count="60" data-suffix="%">60%</b><span>of parents saw their children become more engaged</span></div>
+        </div>
+        <p class="small muted">Pilot 2024–2025, supported by NU Impact Foundation</p>
+      </div>
+    </div>
+
+    <div class="story story--flip">
+      <div class="story__media">
+        <div class="ph" data-in="false" style="aspect-ratio:367/627"><img src="spec1.webp" alt="A specialist receives a certificate at an ARIO programme" width="367" height="627" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:366/627"><img src="spec2.webp" alt="Graduates of the specialist programme at the ARIO stand" width="366" height="627" loading="lazy"></div>
+      </div>
+      <div class="story__body">
+        <span class="story__kicker">Specialists · the multiplier effect</span>
+        <h3>400+ specialists trained, each helping dozens of families every year</h3>
+        <div class="tags"><span class="tag">Rehabilitation specialists: modern correction methods</span><span class="tag">Psychologists: working with families and preventing burnout</span><span class="tag">Teachers: inclusive practice, IEPs, children with SEN</span></div>
+        <p class="small muted">Practitioners and methodologists from a network of partner professional organisations</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="story__media">
+        <div class="ph" data-in="false" style="aspect-ratio:420/616"><img src="fam1.webp" alt="A class for mothers in a training room" width="420" height="616" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:420/620"><img src="fam2.webp" alt="A trainer speaks to participants of the family programme" width="420" height="620" loading="lazy"></div>
+      </div>
+      <div class="story__body">
+        <span class="story__kicker">Families</span>
+        <h3>300 mothers trained: we help them combine work and caring for their child</h3>
+        <p>The mother of a child with a disability often has to leave work. We help her return to her profession while continuing to care for her child.</p>
+        <div class="tags"><span class="tag">Financial literacy</span><span class="tag">AI skills</span><span class="tag">Legal literacy</span><span class="tag">Earning online: SMM, websites, freelancing</span></div>
+      </div>
+    </div>
+
+    <div class="story story--flip">
+      <div class="story__media story__media--one">
+        <div class="note" style="padding:clamp(24px,3vw,40px);background:var(--band);border-radius:var(--r-panel)">
+          <b style="display:block;font:600 clamp(64px,8vw,112px)/.9 var(--font-display);letter-spacing:-.05em;color:var(--band-ink)"><span data-count="15">15</span>+</b>
+          <span style="display:block;margin-top:12px;color:var(--band-ink-2);font-size:16px">people with disabilities employed in 2025</span>
+          <span style="display:block;margin-top:16px;color:var(--band-accent);font-size:15px">Summer Love case, Almaty and Astana. Memoranda of cooperation with companies.</span>
+        </div>
+      </div>
+      <div class="story__body">
+        <span class="story__kicker">Inclusive employment and job coaching</span>
+        <h3>Businesses open vacancies; we prepare, support and train job coaches</h3>
+        <ol class="ol"><li>A job coach supports the candidate through hiring</li><li>The workplace is adapted to the employee’s needs</li><li>We advise HR and the whole company team</li><li>Monitoring and support after the first day at work</li></ol>
+        <p class="pullout">Inclusive employment is not charity. <em>It is access to talent the market does not see.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="sec band" id="impact" aria-labelledby="h-impact">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Impact 2026</span>
+      <h2 class="h2" id="h-impact">In one year the model changed the lives of thousands of families</h2>
+    </div>
+    <div class="impact">
+      <div class="kpi" data-r><b><span data-count="5000">5,000</span>+</b><span>families in the Association’s ecosystem</span></div>
+      <div class="kpi" data-r style="--i:1"><b><span data-count="400">400</span>+</b><span>specialists upgraded their skills</span></div>
+      <div class="kpi" data-r style="--i:2"><b><span data-count="300">300</span>+</b><span>mothers of children with disabilities completed training</span></div>
+      <div class="kpi" data-r style="--i:3"><b><span data-count="30">30</span>+</b><span>teachers trained through the peer-to-peer model</span></div>
+      <div class="kpi" data-r style="--i:4"><b><span data-count="15">15</span>+</b><span>people with disabilities employed</span></div>
+      <div class="kpi" data-r style="--i:5"><b><span data-count="6">6</span></b><span>regions of Kazakhstan covered</span></div>
+    </div>
+    <div class="badges"><span class="badge">Working group of the Ministry of Labour and Social Protection</span><span class="badge">24/7 online support for families</span><span class="badge">Candidate for UN ECOSOC status</span><span class="badge">CSW68 participant, New York</span></div>
+    <p class="data-note">ARIO data for 2026</p>
+  </div>
+</section>
+
+<!-- GOV + UN -->
+<section class="sec" aria-labelledby="h-gov">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Partnership with the state</span>
+      <h2 class="h2" id="h-gov">We work with government bodies so that good practice becomes the norm</h2>
+    </div>
+    <div class="gov4">
+      <div class="step" data-r><span class="step__n">01</span><h3>We research</h3><p>Our own research centre, 3 completed studies</p></div>
+      <div class="step" data-r style="--i:1"><span class="step__n">02</span><h3>We train</h3><p>Programmes are built on research findings</p></div>
+      <div class="step" data-r style="--i:2"><span class="step__n">03</span><h3>We implement</h3><p>In schools, centres and companies</p></div>
+      <div class="step" data-r style="--i:3"><span class="step__n">04</span><h3>We change the rules</h3><p>Proposals for national social policy</p></div>
+    </div>
+    <div class="who">
+      <div data-r><b>Astana City Akimat</b><p>City support and an office provided through SEC Astana</p></div>
+      <div data-r style="--i:1"><b>Ministry of Labour and Social Protection</b><p>A seat in the working group on national social policy</p></div>
+      <div data-r style="--i:2"><b>Regions</b><p>The same approach with local executive bodies in 6 regions</p></div>
+    </div>
+
+    <div class="un">
+      <div class="story__media">
+        <div class="ph" data-in="false" style="aspect-ratio:520/623"><img src="un1.webp" alt="The ARIO delegation in a UN conference hall in New York" width="520" height="623" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:398/672"><img src="un2.webp" alt="Participants of the 68th session of the UN Commission on the Status of Women" width="398" height="672" loading="lazy"></div>
+      </div>
+      <div class="story__body">
+        <span class="story__kicker">International cooperation</span>
+        <h3>We represent Kazakhstan in the UN dialogue on inclusion</h3>
+        <p>ARIO took part in the 68th session of the UN Commission on the Status of Women (CSW68) in New York, dedicated to gender equality and the empowerment of women.</p>
+        <div class="un__card"><b>Candidate for ECOSOC consultative status</b><span class="small">The status will let us represent Kazakhstan’s inclusion agenda at international forums on a permanent basis.</span></div>
+      </div>
+    </div>
+
+    <div class="mq" id="mq">
+      <div class="mq__bar">
+        <span class="eyebrow">Who we work with</span>
+        <button class="btn btn--ghost btn--sm" type="button" id="mqBtn" aria-pressed="false">Pause</button>
+      </div>
+      <div class="mq__view" tabindex="0" aria-label="Organisations ARIO works with">
+        <div class="mq__track" id="mqTrack">
+          <!-- Имена из презентации. Логотипы — только с письменного согласия партнёров. -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESG -->
+<section class="sec" id="esg" aria-labelledby="h-esg" style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">For business: CSR and ESG</span>
+      <h2 class="h2" id="h-esg">We provide data and evidence for your ESG report</h2>
+      <p class="lead">The Association’s main contribution is to the social pillar. We state an environmental contribution only where it actually exists.</p>
+    </div>
+    <div class="esg">
+      <div class="pillar" data-r><span class="pillar__l">E</span><h3>Environment</h3><ul><li>Online training and digital products instead of travel and print</li><li>Eco-friendly toys from the KISHKENTAI workshop</li></ul></div>
+      <div class="pillar pillar--s" data-r style="--i:1"><span class="pillar__l">S</span><h3>Social: our main contribution</h3>
+        <ul><li>Inclusive employment and job-coach mentoring</li><li>Training specialists and supporting families</li><li>Engaging your employees through corporate volunteering</li></ul>
+        <div class="sdg"><span>SDG 4 · Quality education</span><span>SDG 8 · Decent work</span><span>SDG 10 · Reduced inequalities</span></div></div>
+      <div class="pillar" data-r style="--i:2"><span class="pillar__l">G</span><h3>Governance</h3><ul><li>Anti-corruption policy and targeted use of funds</li><li>Transparent reporting to partners</li></ul></div>
+    </div>
+
+    <div class="get">
+      <div>
+        <h3 style="font-size:clamp(22px,2.2vw,28px);margin-bottom:16px">What you get for your reporting</h3>
+        <ul class="checks">
+          <li>Metrics and cases for your ESG report: GRI 404, 405, 413</li>
+          <li>A project social impact report mapped to the SDGs</li>
+          <li>Confirmation that funds were used as intended</li>
+          <li>Photos and videos with usage rights</li>
+          <li>A case study on the Association’s website and social media, and a mention in the annual report</li>
+        </ul>
+        <p class="caveat">SDG and GRI mapping is for information only. The partner decides whether to include the data in its reporting.</p>
+      </div>
+      <div>
+        <h3 style="font-size:clamp(22px,2.2vw,28px);margin-bottom:16px">Ways to partner</h3>
+        <div class="formats tags">
+          <span class="tag">Project sponsorship</span><span class="tag">Year-long strategic partnership</span><span class="tag">Inclusive hiring and internships</span><span class="tag">Corporate volunteering</span><span class="tag">Staff training</span><span class="tag">Office and website accessibility audit</span><span class="tag">Pro bono expertise</span><span class="tag">Venues and equipment</span><span class="tag">Media partnership</span><span class="tag">Joint events</span>
+        </div>
+        <div class="actions" style="margin-top:24px">
+          <a class="btn btn--primary" id="waPartner" href="https://wa.me/77057084813" target="_blank" rel="noopener">Discuss a partnership on WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+          <a class="btn btn--ghost" id="waPack" href="https://wa.me/77057084813" target="_blank" rel="noopener">Request the partner pack</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THEORY OF CHANGE -->
+<section class="sec band" aria-labelledby="h-toc">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Theory of change</span>
+      <h2 class="h2" id="h-toc">How every contribution turns into measurable change</h2>
+    </div>
+    <div class="toc">
+      <div class="toc__col" data-r><h3 style="background:var(--d1);color:#fff">Resources</h3><ul><li>Partner funds</li><li>Research centre</li><li>Premises of schools, medical-social institutions and centres</li><li>Government support</li></ul></div>
+      <div class="toc__col" data-r style="--i:1"><h3 style="background:var(--d2);color:#fff">Activities</h3><ul><li>Research</li><li>Training teachers, coaches, job coaches</li><li>Supporting families and hiring</li><li>Digital products</li></ul></div>
+      <div class="toc__col" data-r style="--i:2"><h3 style="background:var(--d3)">Outputs</h3><ul><li>Trained specialists</li><li>Methods and IEPs in schools</li><li>Prepared workplaces</li></ul></div>
+      <div class="toc__col" data-r style="--i:3"><h3 style="background:var(--d5)">Results</h3><ul><li>Children learn and do sport</li><li>Mothers return to work</li><li>People with disabilities are employed</li></ul></div>
+      <div class="toc__col" data-r style="--i:4"><h3 style="background:var(--d4);color:#fff">Impact</h3><ul><li>A society of equal opportunity</li><li>Practice is embedded in public policy</li></ul></div>
+    </div>
+    <p class="measure"><b>We measure:</b> reach, specialists’ practice, progress on individual goals and employment, in regular reports to partners.</p>
+  </div>
+</section>
+
+<!-- SCALING -->
+<section class="sec" aria-labelledby="h-grow">
+  <div class="wrap grow">
+    <div class="rings" aria-hidden="true">
+      <svg viewBox="0 0 440 440" id="rings">
+        <circle class="r" cx="220" cy="220" r="200" style="stroke:var(--d5)"/>
+        <circle class="r" cx="220" cy="220" r="134" style="stroke:var(--d3)"/>
+        <circle class="r" cx="220" cy="220" r="66" style="stroke:var(--d1)"/>
+        <g id="ringDots"></g>
+        <circle cx="220" cy="220" r="14" style="fill:var(--accent-fill)"/>
+        <text class="lbl" x="220" y="250" text-anchor="middle">Astana</text>
+        <text class="lbl-2" x="220" y="113" text-anchor="middle">Regions of Kazakhstan</text>
+        <text class="lbl-2" x="220" y="40" text-anchor="middle">Central Asia</text>
+      </svg>
+    </div>
+    <div>
+      <div class="head" style="margin-bottom:28px">
+        <span class="eyebrow">Scaling up</span>
+        <h2 class="h2" id="h-grow">The model is ready to grow: from Astana to Kazakhstan and Central Asia</h2>
+      </div>
+      <div class="phases">
+        <div class="phase is-now" data-r><span class="phase__k">Stage 1 · now</span><h3>Strengthen the pilots in Astana</h3><p>Refine the model, document the practice, build the evidence base.</p></div>
+        <div class="phase" data-r style="--i:1"><span class="phase__k">Stage 2</span><h3>Regions of Kazakhstan</h3><p>Partnerships with local akimats and training of local specialist teams.</p></div>
+        <div class="phase" data-r style="--i:2"><span class="phase__k">Stage 3</span><h3>Central Asia</h3><p>Regional partnerships and adaptation to new languages and contexts.</p></div>
+      </div>
+      <p class="why">We replicate knowledge and methods, not buildings, so <b>entering a new region costs little.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="sec" id="team" aria-labelledby="h-team" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Ecosystem · founders</span>
+      <h2 class="h2" id="h-team">The Association was founded by practitioners who advance inclusion in their own fields</h2>
+      <p class="lead">Each project runs independently. ARIO brings them together and builds the missing links.</p>
+    </div>
+    <div class="founders">
+      <article class="fd" data-r><div class="ph" data-in="false"><img src="asem.webp" alt="Asem Tazhiyeva" width="333" height="416" loading="lazy"></div><span class="fd__org">OZIM Platform</span><h3>Asem Tazhiyeva</h3><p>Research on early intervention and inclusive education. A mobile app for parents.</p></article>
+      <article class="fd" data-r style="--i:1"><div class="ph" data-in="false"><img src="aliya.webp" alt="Aliya Sabitova" width="400" height="500" loading="lazy"></div><span class="fd__org">InCare KZ</span><h3>Aliya Sabitova</h3><p>Matching tutors, companions and social assistants with children and adults.</p></article>
+      <article class="fd" data-r style="--i:2"><div class="ph" data-in="false"><img src="aziza.webp" alt="Aziza Khamitova" width="400" height="500" loading="lazy"></div><span class="fd__org">Raiz Language School</span><h3>Aziza Khamitova</h3><p>English and French for children and adults, including children with SEN. Teacher training.</p></article>
+      <article class="fd" data-r style="--i:3"><div class="ph" data-in="false"><img src="gulmira.webp" alt="Gulmira Parmysheva" width="400" height="500" loading="lazy"></div><span class="fd__org">Global Kishkentai</span><h3>Gulmira Parmysheva</h3><p>A workshop where young people with disabilities make eco-friendly toys for speech development.</p></article>
+    </div>
+    <div class="team">
+      <div class="ph" data-in="false"><img src="group.webp" alt="The four founders of ARIO by the wall with the Association’s name" width="667" height="657" loading="lazy"></div>
+      <div class="story__body">
+        <span class="story__kicker">Mission</span>
+        <p class="pullout" style="font-size:clamp(22px,2.4vw,32px);line-height:1.25">Inclusion is not charity. <em>It is an accessible environment and equal rights.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" aria-labelledby="h-faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Partner questions</span><h2 class="h2" id="h-faq">Frequently asked questions from CSR managers</h2></div>
+    <div class="faq" id="faq">
+      <div class="faq__it" data-open="false"><button class="faq__q" type="button" aria-expanded="false" id="q1" aria-controls="a1">Can we support a specific project rather than the Association as a whole?<span class="faq__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="faq__p" id="a1" role="region" aria-labelledby="q1"><div><p>Yes. You can sponsor a single project or programme, or fund a whole area for a year as a strategic partner.</p></div></div></div>
+      <div class="faq__it" data-open="false"><button class="faq__q" type="button" aria-expanded="false" id="q2" aria-controls="a2">Where does the money go?<span class="faq__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="faq__p" id="a2" role="region" aria-labelledby="q2"><div><p>Into programmes and people. We work inside existing schools, medical-social institutions, centres and companies, so nothing is spent on buildings or equipment. We confirm the targeted use of funds in our report to you.</p></div></div></div>
+      <div class="faq__it" data-open="false"><button class="faq__q" type="button" aria-expanded="false" id="q3" aria-controls="a3">What data will we receive for non-financial reporting?<span class="faq__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="faq__p" id="a3" role="region" aria-labelledby="q3"><div><p>Reach, specialists’ practice, progress on individual goals and employment, mapped to SDGs 4, 8 and 10 and GRI disclosures 404, 405 and 413. Whether to include the data in your report is up to you and your auditors.</p></div></div></div>
+      <div class="faq__it" data-open="false"><button class="faq__q" type="button" aria-expanded="false" id="q4" aria-controls="a4">How can we involve our employees?<span class="faq__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="faq__p" id="a4" role="region" aria-labelledby="q4"><div><p>Through corporate volunteering, training in inclusive culture and etiquette, and accessibility audits of your office and digital services.</p></div></div></div>
+      <div class="faq__it" data-open="false"><button class="faq__q" type="button" aria-expanded="false" id="q5" aria-controls="a5">We want to hire an employee with a disability. Where do we start?<span class="faq__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="faq__p" id="a5" role="region" aria-labelledby="q5"><div><p>Write to us. A job coach supports the candidate, prepares the workplace with you, advises HR and the team, and supports the employee after they start.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec band final" id="contacts" aria-labelledby="h-final">
+  <div class="wrap">
+    <span class="eyebrow">Join us</span>
+    <h2 id="h-final" style="margin-top:18px"><span class="ln" data-r>Inclusion is not</span><span class="ln" data-r style="--i:1">charity.</span><span class="ln ln--accent" data-r style="--i:2">It is an accessible</span><span class="ln ln--accent" data-r style="--i:3">environment and equal rights.</span></h2>
+    <div class="actions" style="margin-top:32px">
+      <a class="btn btn--primary" id="waFinal" href="https://wa.me/77057084813" target="_blank" rel="noopener">Message us on WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+      <a class="btn btn--ghost" href="#esg">Become a partner</a>
+    </div>
+    <div class="contacts">
+      <div class="ct"><span class="ct__k">WhatsApp · sign-ups and enquiries</span><span class="ct__v">+7 705 708 4813</span><div class="ct__row"><button class="copy" type="button" data-copy="+7 705 708 4813">Copy</button></div></div>
+      <div class="ct"><span class="ct__k">Phone</span><span class="ct__v">+7 701 999 0991</span><div class="ct__row"><button class="copy" type="button" data-copy="+7 701 999 0991">Copy</button></div></div>
+      <div class="ct"><span class="ct__k">Email</span><span class="ct__v">inclusivesocietyca@gmail.com</span><div class="ct__row"><button class="copy" type="button" data-copy="inclusivesocietyca@gmail.com">Copy</button></div></div>
+      <div class="ct"><span class="ct__k">Address and social media</span><span class="ct__v">9 Kazybek Bi St, NP-6, Astana</span><div class="ct__row"><a class="copy" style="display:inline-flex;align-items:center;text-decoration:none" href="https://www.instagram.com/ario_kz_/" target="_blank" rel="noopener">Instagram @ario_kz_</a></div></div>
+    </div>
+    <footer class="foot">
+      <span class="foot__brand"><img src="logo-globe.svg" alt="" width="28" height="28">© 2026 Association for the Development of an Inclusive Society · Инклюзивті қоғамды дамыту қауымдастығы</span>
+      <span>Astana, Kazakhstan</span>
+    </footer>
+  </div>
+</section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  var COLORS=['#5350b1','#4f5daa','#8bcbe7','#c8388b','#d78b73'];
+  var mqReduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var motionOff=function(){return mqReduce.matches||root.classList.contains('motion-off')};
+  try{ if(localStorage.getItem('ario-motion')==='off') root.classList.add('motion-off'); }catch(e){}
+
+  /* toast */
+  var toastEl=document.getElementById('toast'),tt;
+  function toast(t){toastEl.textContent=t;toastEl.classList.add('is-on');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('is-on')},2200)}
+
+
+  /* motion toggle */
+  var mb=document.getElementById('motionBtn');
+  function syncMotionBtn(){var off=root.classList.contains('motion-off');mb.setAttribute('aria-pressed',String(off));mb.setAttribute('aria-label',off?'Play animation':'Pause animation');mb.title=mb.getAttribute('aria-label');mb.innerHTML=off?'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>':'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>'}
+  mb.addEventListener('click',function(){root.classList.toggle('motion-off');var off=root.classList.contains('motion-off');try{localStorage.setItem('ario-motion',off?'off':'on')}catch(e){}syncMotionBtn();if(off){revealAll();stopLenis()}else{startLenis()}onScroll();toast(off?'Animation paused':'Animation on')});
+  syncMotionBtn();
+
+  /* header */
+  var hdr=document.getElementById('hdr');
+
+  /* reveal: elements already on screen at load stay visible */
+  var revealEls=[].slice.call(document.querySelectorAll('[data-r]'));
+  var phEls=[].slice.call(document.querySelectorAll('.ph[data-in="false"]'));
+  function inView(el){var r=el.getBoundingClientRect();return r.top<window.innerHeight*0.95&&r.bottom>0}
+  revealEls.forEach(function(el){if(inView(el))el.classList.add('is-in')});
+  phEls.forEach(function(el){if(inView(el))el.setAttribute('data-in','true')});
+  function revealAll(){revealEls.forEach(function(el){el.classList.add('is-in')});phEls.forEach(function(el){el.setAttribute('data-in','true')});document.querySelectorAll('[data-count]').forEach(finishCount)}
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;if(t.classList.contains('ph'))t.setAttribute('data-in','true');else t.classList.add('is-in');if(t.hasAttribute('data-count'))runCount(t);io.unobserve(t)})},{threshold:.15,rootMargin:'0px 0px -6% 0px'}):null;
+  /* clip-path hides the photo from IntersectionObserver, so watch its parent */
+  var io2=io?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.querySelectorAll('.ph[data-in="false"]').forEach(function(p){p.setAttribute('data-in','true')});io2.unobserve(e.target)})},{threshold:.2}):null;
+  if(!io||motionOff()){revealAll()}else{revealEls.forEach(function(el){if(!el.classList.contains('is-in'))io.observe(el)});var parents=[];phEls.forEach(function(el){if(el.getAttribute('data-in')!=='true'&&parents.indexOf(el.parentNode)<0)parents.push(el.parentNode)});parents.forEach(function(p){io2.observe(p)})}
+
+  /* counters (только подтверждённые цифры из презентации) */
+  var SEP=document.documentElement.lang==='en'?',':'\u00a0';var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,SEP)};
+  function finishCount(el){el.textContent=fmt(+el.dataset.count)+(el.dataset.suffix||'');el.dataset.done='1'}
+  function runCount(el){if(el.dataset.done)return;el.dataset.done='1';var to=+el.dataset.count,suf=el.dataset.suffix||'';if(motionOff()){finishCount(el);return}var t0=null,D=1100;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/D),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e))+suf;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  document.querySelectorAll('[data-count]').forEach(function(el){if(motionOff()||!io){finishCount(el)}else if(inView(el)){finishCount(el)}else{el.textContent='0'+(el.dataset.suffix||'');io.observe(el)}});
+
+  /* model flow line drawn by scroll */
+  var flow=document.getElementById('flow'),line=document.getElementById('flowLine'),path=document.getElementById('flowPath'),plen=0;
+  function layoutFlow(){var steps=flow.querySelectorAll('.step');if(getComputedStyle(line).display==='none')return;var fr=flow.getBoundingClientRect();line.setAttribute('width',fr.width);line.setAttribute('height',fr.height);line.setAttribute('viewBox','0 0 '+fr.width+' '+fr.height);var d='';steps.forEach(function(s,i){var r=s.getBoundingClientRect(),x=r.left-fr.left+r.width/2,y=fr.height/2+(i%2?10:-10);d+=(i?' L':'M')+x.toFixed(1)+' '+y.toFixed(1)});path.setAttribute('d',d);plen=path.getTotalLength();path.style.strokeDasharray=plen;}
+
+  /* life-cycle horizontal pin */
+  var cycle=document.getElementById('cycle'),track=document.getElementById('cycleTrack'),bar=document.getElementById('cycleBar');
+  function layoutCycle(){if(window.innerWidth<720||motionOff()){cycle.classList.add('is-static');cycle.style.height='';track.style.transform='';return}cycle.classList.remove('is-static');var extra=Math.max(0,track.scrollWidth-window.innerWidth);cycle.dataset.extra=extra;var pin=cycle.querySelector('.cycle__pin');cycle.style.height=(pin.offsetHeight+extra)+'px'}
+
+  /* rings dots */
+  var ringG=document.getElementById('ringDots'),ringDots=[];
+  (function(){var spec=[[66,8,0],[134,16,1],[200,24,2]],h='';spec.forEach(function(s){for(var i=0;i<s[1];i++){var a=i/s[1]*Math.PI*2+s[2]*.3;h+='<circle data-ring="'+s[2]+'" cx="'+(220+s[0]*Math.cos(a)).toFixed(1)+'" cy="'+(220+s[0]*Math.sin(a)).toFixed(1)+'" r="'+(s[2]===0?6:s[2]===1?5:4)+'" fill="'+COLORS[(i+s[2])%5]+'"/>'}});ringG.innerHTML=h;ringDots=[].slice.call(ringG.querySelectorAll('circle'))})();
+  var rings=document.getElementById('rings');
+
+  function prog(el){var r=el.getBoundingClientRect(),vh=window.innerHeight;return Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height*.4)))}
+  function onScroll(){
+    hdr.classList.toggle('is-scrolled',window.scrollY>8);
+    var off=motionOff();
+    if(plen){var p=off?1:Math.min(1,Math.max(0,(window.innerHeight*.85-flow.getBoundingClientRect().top)/(flow.offsetHeight+window.innerHeight*.3)));path.style.strokeDashoffset=(plen*(1-p)).toFixed(1)}
+    if(!cycle.classList.contains('is-static')){var r=cycle.getBoundingClientRect(),extra=+cycle.dataset.extra||0,top=parseFloat(getComputedStyle(cycle.querySelector('.cycle__pin')).top)||0,q=Math.min(1,Math.max(0,(top-r.top)/Math.max(1,extra)));track.style.transform='translate3d('+(-extra*q).toFixed(1)+'px,0,0)';bar.style.transform='scaleX('+q.toFixed(3)+')'}else{bar.style.transform='scaleX(1)'}
+    var rp=off?1:prog(rings);ringDots.forEach(function(c){var k=+c.dataset.ring,v=Math.min(1,Math.max(0,(rp-.15-k*.18)/.22));c.style.opacity=v.toFixed(2);c.style.transformOrigin='220px 220px';c.style.transform='scale('+(0.4+0.6*v).toFixed(3)+')'});
+  }
+  var ticking=false;window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;onScroll()})}},{passive:true});
+  function layout(){layoutFlow();layoutCycle();onScroll()}
+  window.addEventListener('resize',layout);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
+  window.addEventListener('load',layout);
+  layout();
+
+  /* marquee */
+  var orgs=['Ministry of Labour and Social Protection','Astana City Akimat','SEC Astana','NU Impact Foundation','School No. 96 Astana','UN CSW68','UNESCO','UNICEF','UN DPG','C5+','Summer Love','EveryMind','UYA','OZIM Platform','InCare KZ','Raiz Language School','Global Kishkentai'];
+  var mt=document.getElementById('mqTrack'),html='';
+  for(var k=0;k<2;k++)orgs.forEach(function(o,i){html+='<span class="org"'+(k?' aria-hidden="true"':'')+'><i style="background:'+COLORS[i%5]+'"></i>'+o+'</span>'});
+  mt.innerHTML=html;
+  var mq=document.getElementById('mq'),mqBtn=document.getElementById('mqBtn');
+  mqBtn.addEventListener('click',function(){var p=mq.classList.toggle('is-paused');mqBtn.setAttribute('aria-pressed',String(p));mqBtn.textContent=p?'Resume':'Pause'});
+
+  /* faq */
+  document.getElementById('faq').addEventListener('click',function(e){var q=e.target.closest('.faq__q');if(!q)return;var it=q.parentNode,open=it.dataset.open==='true';this.querySelectorAll('.faq__it').forEach(function(x){x.dataset.open='false';x.querySelector('.faq__q').setAttribute('aria-expanded','false')});if(!open){it.dataset.open='true';q.setAttribute('aria-expanded','true')}});
+
+  /* whatsapp links with prefilled text (номер +7 705 708 4813 — по ТЗ) */
+  var wa=function(t){return 'https://wa.me/77057084813?text='+encodeURIComponent(t)};
+  document.getElementById('waPartner').href=wa('Hello! Our company is interested in partnering with ARIO as part of our CSR/ESG programme.');
+  document.getElementById('waPack').href=wa('Hello! Please send us the ARIO partner pack (CSR/ESG).');
+  document.getElementById('waFinal').href=wa('Hello! I am writing from the ARIO website.');
+
+  /* copy */
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.copy,done=function(){toast('Copied: '+v)};try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}})});
+  function sel(b){var t=b.closest('.ct').querySelector('.ct__v'),r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);toast('Selected. Press Ctrl+C to copy')}
+
+  /* hero globe: brand dots assemble into a rotating sphere */
+  var cv=document.getElementById('globe'),ctx=cv.getContext('2d'),N=520,pts=[],W=0,H=0,DPR=1,t0=performance.now(),raf=null,visible=true;
+  for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,rad=Math.sqrt(1-y*y),th=i*2.39996323;pts.push({x:Math.cos(th)*rad,y:y,z:Math.sin(th)*rad,c:COLORS[i%5],sx:(Math.random()*2-1)*1.8,sy:(Math.random()*2-1)*1.8,d:Math.random()*0.35,s:0.6+Math.random()*0.9})}
+  function size(){var r=cv.getBoundingClientRect();DPR=Math.min(2,window.devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0)}
+  function draw(now){
+    var el=(now-t0)/1000,off=motionOff(),R=Math.min(W,H)*0.4,cx=W/2,cy=H/2,rot=off?0.6:0.6+el*0.18,tilt=-0.38;
+    ctx.clearRect(0,0,W,H);
+    var cr=Math.cos(rot),sr=Math.sin(rot),ct=Math.cos(tilt),st=Math.sin(tilt),list=[];
+    for(var i=0;i<N;i++){var p=pts[i],x=p.x*cr+p.z*sr,z=-p.x*sr+p.z*cr,y=p.y*ct-z*st;z=p.y*st+z*ct;
+      var a=off?1:Math.min(1,Math.max(0,(el-p.d)/1.3));a=1-Math.pow(1-a,3);
+      var X=cx+(x*R)*a+(p.sx*R)*(1-a),Y=cy+(y*R)*a+(p.sy*R)*(1-a);
+      list.push([z,X,Y,p])}
+    list.sort(function(a,b){return a[0]-b[0]});
+    for(var j=0;j<list.length;j++){var L=list[j],depth=(L[0]+1)/2;ctx.globalAlpha=0.25+depth*0.75;ctx.fillStyle=L[3].c;ctx.beginPath();ctx.arc(L[1],L[2],(1.4+depth*2.6)*L[3].s*(R/180),0,Math.PI*2);ctx.fill()}
+    ctx.globalAlpha=1;
+    if(!off&&visible)raf=requestAnimationFrame(draw);else raf=null;
+  }
+  function kick(){if(!raf)raf=requestAnimationFrame(draw)}
+  size();kick();
+  window.addEventListener('resize',function(){size();kick()});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible)kick()}).observe(cv);
+  mb.addEventListener('click',kick);
+  mqReduce.addEventListener&&mqReduce.addEventListener('change',function(){layout();kick()});
+
+  /* smooth scroll (Lenis), off when motion is reduced */
+  var lenis=null,lraf=null;
+  function startLenis(){if(lenis||motionOff()||typeof window.Lenis!=='function')return;lenis=new window.Lenis({duration:1.05,smoothWheel:true});function f(t){lenis.raf(t);lraf=requestAnimationFrame(f)}lraf=requestAnimationFrame(f);lenis.on('scroll',onScroll)}
+  function stopLenis(){if(!lenis)return;cancelAnimationFrame(lraf);lenis.destroy();lenis=null}
+  startLenis();
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();var off=(hdr.offsetHeight||68)+12;if(lenis)lenis.scrollTo(t,{offset:-off});else window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-off,behavior:motionOff()?'auto':'smooth'});if(id==='#main'){t.setAttribute('tabindex','-1');t.focus({preventScroll:true})}})});
+})();
+</script>
+</body>
+</html>

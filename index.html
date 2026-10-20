@@ -3,8 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>АРИО — лендинг</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<title>АРИО — Ассоциация развития инклюзивного общества</title>
+<meta name="description" content="Экосистема инклюзии для людей с инвалидностью и их семей. Обучаем педагогов, тренеров и JobCoach — от раннего вмешательства до трудоустройства.">
+<link rel="canonical" href="https://official-nanakai.github.io/ario-landing/">
+<link rel="alternate" hreflang="ru" href="https://official-nanakai.github.io/ario-landing/">
+<link rel="alternate" hreflang="en" href="https://official-nanakai.github.io/ario-landing/en.html">
+<link rel="alternate" hreflang="x-default" href="https://official-nanakai.github.io/ario-landing/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="АРИО — Ассоциация развития инклюзивного общества">
+<meta property="og:description" content="Экосистема инклюзии для людей с инвалидностью и их семей. Обучаем педагогов, тренеров и JobCoach — от раннего вмешательства до трудоустройства.">
+<meta property="og:url" content="https://official-nanakai.github.io/ario-landing/">
+<meta property="og:image" content="https://official-nanakai.github.io/ario-landing/group.webp">
+<meta name="theme-color" content="#13284a">
+<link rel="icon" type="image/svg+xml" href="logo-globe.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Golos+Text:wght@400;500;600&display=swap">
@@ -79,7 +91,7 @@ img{display:block;max-width:100%}
 .hdr.is-scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -16px #13284a40}
 .hdr .wrap{height:var(--header-h);display:flex;align-items:center;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
-.brand__mark{width:36px;height:36px;flex:0 0 auto}
+.brand__mark{width:50px;height:auto;aspect-ratio:518/527;flex:0 0 auto}
 .brand__name{font:700 20px/1 var(--font-display);letter-spacing:.02em}
 .brand__sub{display:block;font:400 11px/1.25 var(--font-text);color:var(--ink-3);max-width:20ch}
 .nav{display:none;gap:2px;margin-left:auto}
@@ -88,8 +100,9 @@ img{display:block;max-width:100%}
 .hdr__tools{display:flex;align-items:center;gap:8px;margin-left:auto}
 .nav + .hdr__tools{margin-left:12px}
 .lang{display:inline-flex;padding:3px;border:1px solid var(--line-2);border-radius:var(--r-pill)}
-.lang button{border:0;background:none;min-height:30px;padding:0 9px;border-radius:var(--r-pill);font:500 13px/1 var(--font-text);color:var(--ink-3);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.lang a{display:inline-flex;align-items:center;min-height:32px;padding:0 11px;border-radius:var(--r-pill);font:500 13px/1 var(--font-text);color:var(--ink-3);text-decoration:none}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current="true"]{background:var(--ink);color:var(--bg)}
 .iconbtn{width:40px;height:40px;display:inline-grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);background:none;color:var(--ink);cursor:pointer}
 .iconbtn svg{width:18px;height:18px}
 .hdr .btn{display:none}
@@ -324,7 +337,8 @@ img{display:block;max-width:100%}
 .ct__row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .copy{border:1px solid var(--band-line);background:none;color:var(--band-ink);min-height:36px;padding:0 12px;border-radius:var(--r-pill);font:500 13px/1 var(--font-text);cursor:pointer}
 .copy:hover{background:var(--band-2)}
-.foot{padding-block:28px;border-top:1px solid var(--band-line);font-size:13px;color:var(--band-ink-2);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.foot__brand{display:inline-flex;align-items:center;gap:10px}.foot__brand img{width:28px;height:auto}
+.foot{padding-block:28px;align-items:center;border-top:1px solid var(--band-line);font-size:13px;color:var(--band-ink-2);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));translate:-50% 20px;opacity:0;z-index:80;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);font-size:14px;transition:opacity var(--dur) var(--ease),translate var(--dur) var(--ease);pointer-events:none}
 .toast.is-on{opacity:1;translate:-50% 0}
 
@@ -356,19 +370,14 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="АРИО — на главную">
-      <!-- Временный знак из точек. Замените файлом логотипа, когда он будет готов. -->
-      <svg class="brand__mark" viewBox="0 0 36 36" aria-hidden="true">
-        <g id="markdots"></g>
-      </svg>
+      <img class="brand__mark" src="logo-globe.svg" alt="" width="40" height="41">
       <span><span class="brand__name">АРИО</span><span class="brand__sub">Ассоциация развития инклюзивного общества</span></span>
     </a>
     <nav class="nav" aria-label="Разделы">
       <a href="#model">Модель</a><a href="#cycle">Путь</a><a href="#cases">Результаты</a><a href="#esg">Для бизнеса</a><a href="#team">Основатели</a><a href="#contacts">Контакты</a>
     </nav>
     <div class="hdr__tools">
-      <div class="lang" role="group" aria-label="Язык сайта">
-        <button type="button" aria-pressed="false" data-lang="kk" title="Казахская версия готовится">Қаз</button><button type="button" aria-pressed="true" data-lang="ru">Рус</button><button type="button" aria-pressed="false" data-lang="en" title="English version is coming">Eng</button>
-      </div>
+      <nav class="lang" aria-label="Язык"><a href="./" hreflang="ru" lang="ru" aria-current="true">Рус</a><a href="en.html" hreflang="en" lang="en">Eng</a></nav>
       <button class="iconbtn" type="button" id="motionBtn" aria-pressed="false" aria-label="Остановить анимацию" title="Остановить анимацию">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
       </button>
@@ -507,7 +516,7 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
     </div>
 
     <div class="story">
-      <div class="story__media story__media--one"><div class="ph" data-in="false" style="aspect-ratio:1000/547"><img src="assets/img/school.webp" alt="Педагоги школы №96 Астаны с сертификатами после программы АРИО" width="1000" height="547" loading="lazy"></div></div>
+      <div class="story__media story__media--one"><div class="ph" data-in="false" style="aspect-ratio:1000/547"><img src="school.webp" alt="Педагоги школы №96 Астаны с сертификатами после программы АРИО" width="1000" height="547" loading="lazy"></div></div>
       <div class="story__body">
         <span class="story__kicker">Инклюзивное образование · Школа №96, Астана</span>
         <h3>Школа учится передавать опыт</h3>
@@ -523,8 +532,8 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
 
     <div class="story story--flip">
       <div class="story__media">
-        <div class="ph" data-in="false" style="aspect-ratio:367/627"><img src="assets/img/spec1.webp" alt="Вручение сертификата специалисту на программе АРИО" width="367" height="627" loading="lazy"></div>
-        <div class="ph" data-in="false" style="aspect-ratio:366/627"><img src="assets/img/spec2.webp" alt="Выпускники программы для специалистов у стенда АРИО" width="366" height="627" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:367/627"><img src="spec1.webp" alt="Вручение сертификата специалисту на программе АРИО" width="367" height="627" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:366/627"><img src="spec2.webp" alt="Выпускники программы для специалистов у стенда АРИО" width="366" height="627" loading="lazy"></div>
       </div>
       <div class="story__body">
         <span class="story__kicker">Специалисты · эффект мультипликатора</span>
@@ -536,8 +545,8 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
 
     <div class="story">
       <div class="story__media">
-        <div class="ph" data-in="false" style="aspect-ratio:420/616"><img src="assets/img/fam1.webp" alt="Занятие для матерей в учебном классе" width="420" height="616" loading="lazy"></div>
-        <div class="ph" data-in="false" style="aspect-ratio:420/620"><img src="assets/img/fam2.webp" alt="Ведущая выступает перед участницами программы для семей" width="420" height="620" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:420/616"><img src="fam1.webp" alt="Занятие для матерей в учебном классе" width="420" height="616" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:420/620"><img src="fam2.webp" alt="Ведущая выступает перед участницами программы для семей" width="420" height="620" loading="lazy"></div>
       </div>
       <div class="story__body">
         <span class="story__kicker">Семьи</span>
@@ -606,8 +615,8 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
 
     <div class="un">
       <div class="story__media">
-        <div class="ph" data-in="false" style="aspect-ratio:520/623"><img src="assets/img/un1.webp" alt="Делегация АРИО в зале заседаний ООН в Нью-Йорке" width="520" height="623" loading="lazy"></div>
-        <div class="ph" data-in="false" style="aspect-ratio:398/672"><img src="assets/img/un2.webp" alt="Участницы 68-й сессии Комиссии ООН по положению женщин" width="398" height="672" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:520/623"><img src="un1.webp" alt="Делегация АРИО в зале заседаний ООН в Нью-Йорке" width="520" height="623" loading="lazy"></div>
+        <div class="ph" data-in="false" style="aspect-ratio:398/672"><img src="un2.webp" alt="Участницы 68-й сессии Комиссии ООН по положению женщин" width="398" height="672" loading="lazy"></div>
       </div>
       <div class="story__body">
         <span class="story__kicker">Международное сотрудничество</span>
@@ -730,13 +739,13 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
       <p class="lead">Проекты работают самостоятельно. АРИО объединяет их и развивает недостающие связи.</p>
     </div>
     <div class="founders">
-      <article class="fd" data-r><div class="ph" data-in="false"><img src="assets/img/asem.webp" alt="Асем Тажиева" width="333" height="416" loading="lazy"></div><span class="fd__org">OZIM Platform</span><h3>Асем Тажиева</h3><p>Исследования раннего вмешательства и инклюзивного образования. Мобильное приложение для родителей.</p></article>
-      <article class="fd" data-r style="--i:1"><div class="ph" data-in="false"><img src="assets/img/aliya.webp" alt="Алия Сабитова" width="400" height="500" loading="lazy"></div><span class="fd__org">InCare KZ</span><h3>Алия Сабитова</h3><p>Подбор тьюторов, компаньонов и социальных помощников для детей и взрослых.</p></article>
-      <article class="fd" data-r style="--i:2"><div class="ph" data-in="false"><img src="assets/img/aziza.webp" alt="Азиза Хамитова" width="400" height="500" loading="lazy"></div><span class="fd__org">Raiz Language School</span><h3>Азиза Хамитова</h3><p>Английский и французский для детей и взрослых, включая детей с ООП. Обучение педагогов.</p></article>
-      <article class="fd" data-r style="--i:3"><div class="ph" data-in="false"><img src="assets/img/gulmira.webp" alt="Гульмира Пармышева" width="400" height="500" loading="lazy"></div><span class="fd__org">Global Kishkentai</span><h3>Гульмира Пармышева</h3><p>Мастерская, где молодые люди с инвалидностью создают экологичные игрушки для развития речи.</p></article>
+      <article class="fd" data-r><div class="ph" data-in="false"><img src="asem.webp" alt="Асем Тажиева" width="333" height="416" loading="lazy"></div><span class="fd__org">OZIM Platform</span><h3>Асем Тажиева</h3><p>Исследования раннего вмешательства и инклюзивного образования. Мобильное приложение для родителей.</p></article>
+      <article class="fd" data-r style="--i:1"><div class="ph" data-in="false"><img src="aliya.webp" alt="Алия Сабитова" width="400" height="500" loading="lazy"></div><span class="fd__org">InCare KZ</span><h3>Алия Сабитова</h3><p>Подбор тьюторов, компаньонов и социальных помощников для детей и взрослых.</p></article>
+      <article class="fd" data-r style="--i:2"><div class="ph" data-in="false"><img src="aziza.webp" alt="Азиза Хамитова" width="400" height="500" loading="lazy"></div><span class="fd__org">Raiz Language School</span><h3>Азиза Хамитова</h3><p>Английский и французский для детей и взрослых, включая детей с ООП. Обучение педагогов.</p></article>
+      <article class="fd" data-r style="--i:3"><div class="ph" data-in="false"><img src="gulmira.webp" alt="Гульмира Пармышева" width="400" height="500" loading="lazy"></div><span class="fd__org">Global Kishkentai</span><h3>Гульмира Пармышева</h3><p>Мастерская, где молодые люди с инвалидностью создают экологичные игрушки для развития речи.</p></article>
     </div>
     <div class="team">
-      <div class="ph" data-in="false"><img src="assets/img/group.webp" alt="Четыре основательницы АРИО у стены с названием Ассоциации" width="667" height="657" loading="lazy"></div>
+      <div class="ph" data-in="false"><img src="group.webp" alt="Четыре основательницы АРИО у стены с названием Ассоциации" width="667" height="657" loading="lazy"></div>
       <div class="story__body">
         <span class="story__kicker">Миссия</span>
         <p class="pullout" style="font-size:clamp(22px,2.4vw,32px);line-height:1.25">Инклюзия — это не благотворительность. <em>Это доступная среда и равные права.</em></p>
@@ -775,7 +784,7 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
       <div class="ct"><span class="ct__k">Адрес и соцсети</span><span class="ct__v">г. Астана, ул. Казыбек би, 9, НП-6</span><div class="ct__row"><a class="copy" style="display:inline-flex;align-items:center;text-decoration:none" href="https://www.instagram.com/ario_kz_/" target="_blank" rel="noopener">Instagram @ario_kz_</a></div></div>
     </div>
     <footer class="foot">
-      <span>© 2026 Ассоциация развития инклюзивного общества · Инклюзивті қоғамды дамыту қауымдастығы</span>
+      <span class="foot__brand"><img src="logo-globe.svg" alt="" width="28" height="28">© 2026 Ассоциация развития инклюзивного общества · Инклюзивті қоғамды дамыту қауымдастығы</span>
       <span>Астана, Казахстан</span>
     </footer>
   </div>
@@ -792,15 +801,10 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
   var motionOff=function(){return mqReduce.matches||root.classList.contains('motion-off')};
   try{ if(localStorage.getItem('ario-motion')==='off') root.classList.add('motion-off'); }catch(e){}
 
-  /* brand mark placeholder: ring of dots */
-  (function(){var g=document.getElementById('markdots'),h='';for(var i=0;i<14;i++){var a=i/14*Math.PI*2,r=13;h+='<circle cx="'+(18+r*Math.cos(a)).toFixed(2)+'" cy="'+(18+r*Math.sin(a)).toFixed(2)+'" r="'+(1.6+(i%3)*.5)+'" fill="'+COLORS[i%5]+'"/>'}h+='<circle cx="18" cy="18" r="6.5" fill="#4f5daa"/><circle cx="16" cy="16" r="2.4" fill="#8bcbe7"/>';g.innerHTML=h})();
-
   /* toast */
   var toastEl=document.getElementById('toast'),tt;
   function toast(t){toastEl.textContent=t;toastEl.classList.add('is-on');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('is-on')},2200)}
 
-  /* language buttons (ru only at launch) */
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){if(b.dataset.lang!=='ru')toast(b.dataset.lang==='kk'?'Қазақша нұсқасы дайындалуда':'English version is coming soon')})});
 
   /* motion toggle */
   var mb=document.getElementById('motionBtn');
@@ -824,7 +828,7 @@ html.motion-off .mq__track{animation:none!important;flex-wrap:wrap;width:auto}
   if(!io||motionOff()){revealAll()}else{revealEls.forEach(function(el){if(!el.classList.contains('is-in'))io.observe(el)});var parents=[];phEls.forEach(function(el){if(el.getAttribute('data-in')!=='true'&&parents.indexOf(el.parentNode)<0)parents.push(el.parentNode)});parents.forEach(function(p){io2.observe(p)})}
 
   /* counters (только подтверждённые цифры из презентации) */
-  var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')};
+  var SEP=document.documentElement.lang==='en'?',':'\u00a0';var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,SEP)};
   function finishCount(el){el.textContent=fmt(+el.dataset.count)+(el.dataset.suffix||'');el.dataset.done='1'}
   function runCount(el){if(el.dataset.done)return;el.dataset.done='1';var to=+el.dataset.count,suf=el.dataset.suffix||'';if(motionOff()){finishCount(el);return}var t0=null,D=1100;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/D),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e))+suf;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
   document.querySelectorAll('[data-count]').forEach(function(el){if(motionOff()||!io){finishCount(el)}else if(inView(el)){finishCount(el)}else{el.textContent='0'+(el.dataset.suffix||'');io.observe(el)}});
